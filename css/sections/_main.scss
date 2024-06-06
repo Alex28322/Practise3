@@ -14,6 +14,7 @@
     margin-top: -220px;
     z-index: 2;
     overflow-x: hidden;
+    text-align: center;
 }
 .oprions__img-box{
      max-width: 940px;
@@ -55,11 +56,22 @@ margin-bottom: 30px;
 line-height: 140%;
 font-size: 18px;
 }
+.options__article-mobile{
+    display: none;
+    width: 200px;
+margin-bottom: 30px;
+line-height: 140%;
+font-size: 18px;
+}
 .article {
     font-weight: bold;
 }
 .options__text {
     width: 240px;
+    line-height: 170%;
+}
+.options__text-mob{
+    display: none;
     line-height: 170%;
 }
 .text {
@@ -450,13 +462,15 @@ display: block;
     width: 70%;
     display: flex;
     align-items: center;
+    background: url("../img/Trapezoid.svg") center no-repeat;
+    background-size: contain;
     margin: 0 auto;
-    background-color: #0039A6;
-    clip-path: polygon(97% 0, 100% 4%, 93% 100%, 0 100%, 0 0);
     padding: 40px 60px;
     border-radius: 16px 30px 16px 16px;
     position: relative;
 margin-top: 100px;
+font-family: "Montserrat",sans-serif;
+overflow: visible;
 }
 .free__article {
     font-size: 20px;
@@ -473,11 +487,44 @@ margin-top: 100px;
 .free__button {
     width: 280px;
     color: #fff;
+    font-family: "Open sans",sans-serif;
     background-color: #0039A6;
-    padding: 30px;
+    padding: 20px 30px;
     border-radius: 20px 0 20px 0;
     border: 5px solid #fff;
     position: absolute;
     right: 0;
     bottom: -30px;
+}
+@media (max-width:780px){
+    .main{
+        min-width: 320px;
+    }
+    .options{
+        width: 800px;
+        justify-content: space-evenly;
+    }
+    .oprions__img-box{
+margin-bottom: -100px;
+    }
+    .options__img{
+        width: 80px;
+        height: 80px;
+        background-size: contain;
+        margin-top: 30px;
+    }
+    .options__item{
+        width: 200px;
+        padding: 130px 20px 50px 20px;
+    }
+    .options__article{
+        width: 200px;
+    }
+    .options__text-mob{
+        display: block;
+        width: 200px;
+    }
+    .options__text{
+display: none;
+    }
 }
