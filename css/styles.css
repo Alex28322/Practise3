@@ -191,7 +191,6 @@
   color: #fff;
   text-align: left;
   padding-left: 310px;
-  margin: 0;
   padding-bottom: 20px;
 }
 
@@ -218,10 +217,14 @@
 @media (max-width: 780px) {
   .header__logo-box {
     background: url("../img/icon__logo-mob.svg") center no-repeat;
-    margin: 0 auto;
     width: 115px;
     height: 40px;
     background-size: contain;
+    padding: 0;
+    margin-right: calc(50% - 57.5px);
+  }
+  .nav {
+    justify-content: space-between;
   }
   .header__icon {
     display: none;
@@ -235,8 +238,15 @@
   .nav__item {
     display: none;
   }
+  .head__content-text {
+    width: 45%;
+    padding: 0;
+  }
+  .head__content-article {
+    font-size: 20px;
+  }
   .header__content {
-    background: url("../img/kreml-mob.png") bottom right no-repeat;
+    background: url("../img/kreml_mobile.png") right no-repeat;
     height: 480px;
   }
   .header__article-box {
@@ -245,16 +255,39 @@
   }
   .header__blue {
     border-radius: 0 0 0 0;
+    top: 470px;
+    padding: 80px 0 0 0;
+    left: 0;
   }
   .head__content-button {
-    margin: 160px 0 -30px 0;
+    position: relative;
+    margin: 100px 0 -30px 0;
     border: #ffffff solid 5px;
+    border-radius: 25px 0 25px 0;
+    width: 240px;
+    padding: 0;
+    z-index: 2;
+    font-size: 12px;
+    height: 50px;
+  }
+  .header__blue-article {
+    font-size: 20px;
+    text-align: center;
+    padding: 0;
+  }
+  .header__blue-text {
+    text-align: center;
+    padding-left: 0;
+    width: 240px;
+    margin: 0 auto;
   }
 }
 .main {
   min-width: 920px;
   width: 100%;
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
 }
 
 .options {
@@ -370,6 +403,15 @@
   padding-bottom: 110px;
 }
 
+.courcess__overflow-mob {
+  display: flex;
+  max-width: 1140px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  text-align: center;
+  margin: 0 auto;
+}
+
 .courcess__box {
   width: 20%;
   display: flex;
@@ -438,11 +480,25 @@
   margin-bottom: 50px;
 }
 
+.teachers__subtext-mob {
+  display: none;
+  font-size: 14;
+  text-align: center;
+  line-height: 150%;
+  color: #425D78;
+}
+
 .teachers__img {
   background: url("../img/Woman.png") center no-repeat;
   width: 600px;
   height: 600px;
   border-radius: 0 100px 0 100px;
+}
+
+.teachers__name-mob {
+  font-size: 20px;
+  font-weight: bold;
+  display: none;
 }
 
 .teachers__list {
@@ -534,13 +590,19 @@
   margin-bottom: 30px;
 }
 
+.teachers__options__button-container {
+  width: 360px;
+  background-color: #EDF1F5;
+  height: 60px;
+  margin: 75px 0 0 150px;
+}
+
 .teachers__options__button-gray {
   color: #fff;
   background-color: #425D78;
   border-radius: 50px;
   width: 175px;
   height: 50px;
-  margin: 75px 30px 0px 150px;
 }
 
 .teachers__options__button-white {
@@ -549,7 +611,7 @@
   border-radius: 50px;
   width: 175px;
   height: 50px;
-  margin-top: 75px;
+  border: transparent;
 }
 
 .teachers__options__text-box-container {
@@ -683,6 +745,10 @@
 .ratife__time {
   width: 49%;
   color: #425D78;
+}
+
+.ratife__year-mob {
+  display: none;
 }
 
 .ratife__money {
@@ -819,13 +885,26 @@
   bottom: -30px;
 }
 
+.free__button-mob {
+  display: none;
+  width: 280px;
+  color: #fff;
+  font-family: "Open sans", sans-serif;
+  background-color: #0039A6;
+  padding: 20px 30px;
+  border-radius: 20px 0 20px 0;
+  border: 5px solid #fff;
+}
+
 @media (max-width: 780px) {
   .main {
     min-width: 320px;
+    margin-top: -240px;
   }
   .options {
     width: 800px;
     justify-content: space-evenly;
+    order: -2;
   }
   .oprions__img-box {
     margin-bottom: -100px;
@@ -849,6 +928,121 @@
   }
   .options__text {
     display: none;
+  }
+  .teachers {
+    order: -1;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .teachers__img {
+    background: url("../img/blonde.svg") center no-repeat;
+    width: 200px;
+    height: 200px;
+  }
+  .teachers__article {
+    font-size: 20px;
+  }
+  .teachers__subtext-mob {
+    display: block;
+  }
+  .teachers__name-mob {
+    display: block;
+  }
+  .teachers__list {
+    width: 82.5%;
+    padding: 0;
+    text-align: center;
+    margin: 0 auto;
+  }
+  .teachers__list-dot {
+    margin-right: 10px;
+  }
+  .teachers__options {
+    width: 100%;
+  }
+  .teachers__options__language-box {
+    padding: 0;
+  }
+  .teachers__options__button-gray {
+    width: 135px;
+  }
+  .teachers__options__button-white {
+    width: 135px;
+  }
+  .teachers__options__button-container {
+    width: 88%;
+    margin: 0 auto;
+    margin: 60px 0 60px 0;
+  }
+  .teachers__options__text-box-container {
+    flex-direction: column;
+    padding: 0;
+  }
+  .teachers__options__text-box {
+    margin: 0 auto;
+  }
+  .teachers__options__text-box:nth-child(even) {
+    margin: 0 auto;
+  }
+  .courcess__article {
+    font-size: 20px;
+  }
+  .courcess__box {
+    width: 240px;
+  }
+  .courcess__overflow-mob {
+    width: 2100px;
+    max-width: none;
+  }
+  .prices__companies {
+    width: 61%;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  .prices__box {
+    width: 88%;
+    padding: 0;
+  }
+  .prices__box-text {
+    display: none;
+  }
+  .prices__box-year {
+    display: none;
+  }
+  .prices__box-year {
+    display: none;
+  }
+  .ratife__time {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  .ratife__money {
+    width: 50%;
+  }
+  .ratife__year-mob {
+    display: block;
+    width: 50%;
+    color: #425D78;
+    margin-bottom: 15px;
+  }
+  .fortyfive {
+    margin-bottom: 70px;
+  }
+  .proposal-short {
+    display: none;
+  }
+  .proposal-long {
+    display: none;
+  }
+  .review__article {
+    font-size: 20px;
+  }
+  .free {
+    display: none;
+  }
+  .free__button-mob {
+    display: block;
   }
 }
 .footer {

@@ -2,6 +2,8 @@
     min-width: 920px;
     width: 100%;
     margin: 0 auto;
+    display: flex;
+    flex-direction: column;
 }
 .options {
     max-width: 940px;
@@ -101,6 +103,14 @@ font-size: 18px;
     margin:  0 auto;
     padding-bottom: 110px;
 }
+.courcess__overflow-mob{
+    display: flex;
+    max-width: 1140px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    text-align: center;
+    margin:  0 auto;
+}
 .courcess__box {
     width: 20%;
     display: flex;
@@ -161,11 +171,23 @@ font-weight: bold;
     margin-top: 20px;
     margin-bottom: 50px;
 }
+.teachers__subtext-mob{
+    display: none;
+    font-size: 14;
+    text-align: center;
+    line-height: 150%;
+    color: #425D78;
+}
 .teachers__img {
     background:  url("../img/Woman.png") center no-repeat;
     width: 600px;
     height: 600px;
     border-radius: 0 100px 0 100px;
+}
+.teachers__name-mob{
+    font-size: 20px;
+    font-weight: bold;
+    display: none;
 }
 .teachers__list {
     width: 40%;
@@ -245,13 +267,18 @@ font-weight:bolder;
 }
 .button {
 }
+.teachers__options__button-container{
+width: 360px;
+background-color: #EDF1F5;
+height: 60px;
+margin: 75px 0 0 150px;
+}
 .teachers__options__button-gray {
     color: #fff;
     background-color:#425D78;
     border-radius: 50px;
     width: 175px;
     height: 50px;
-    margin: 75px 30px 0px 150px;
 }
 .teachers__options__button-white {
     color:#425D78;
@@ -259,7 +286,7 @@ font-weight:bolder;
     border-radius: 50px;
     width: 175px;
     height: 50px;
-    margin-top: 75px;
+    border: transparent;
 }
 .teachers__options__text-box-container{
     width: 100%;
@@ -376,6 +403,9 @@ padding: 0 70px 0 120px;
 .ratife__time {
     width: 49%;
     color: #425D78;
+}
+.ratife__year-mob{
+    display: none;
 }
 .ratife__money {
     width: 25%;
@@ -496,13 +526,25 @@ overflow: visible;
     right: 0;
     bottom: -30px;
 }
+.free__button-mob{
+    display: none;
+    width: 280px;
+    color: #fff;
+    font-family: "Open sans",sans-serif;
+    background-color: #0039A6;
+    padding: 20px 30px;
+    border-radius: 20px 0 20px 0;
+    border: 5px solid #fff;
+}
 @media (max-width:780px){
     .main{
         min-width: 320px;
+        margin-top: -240px;
     }
     .options{
         width: 800px;
         justify-content: space-evenly;
+        order: -2;
     }
     .oprions__img-box{
 margin-bottom: -100px;
@@ -526,5 +568,125 @@ margin-bottom: -100px;
     }
     .options__text{
 display: none;
+    }
+    .teachers{
+        order: -1;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+    }
+    .teachers__img{
+        background: url("../img/blonde.svg") center no-repeat;
+        width: 200px;
+        height: 200px;
+    }
+    .teachers__article{
+        font-size: 20px;
+    }
+    .teachers__subtext-mob{
+        display: block;
+    }
+    .teachers__name-mob{
+        display: block;
+    }
+    .teachers__list{
+        width: 82.5%;
+        padding: 0;
+        text-align: center;
+        margin: 0 auto;
+    }
+    .teachers__list-dot{
+        margin-right: 10px;
+    }
+    .teachers__options {
+        width: 100%;
+    }
+    .teachers__options__language-box{
+        padding: 0;
+    }
+    .teachers__options__button-gray{
+        width: 135px;
+    }
+    .teachers__options__button-white{
+        width: 135px;
+    }
+    .teachers__options__button-container{
+        width: 88%;
+        margin: 0 auto;
+        margin: 60px 0 60px 0;
+    }
+    .teachers__options__text-box-container{
+        flex-direction: column;
+        padding: 0;
+    }
+    .teachers__options__text-box{
+        margin: 0 auto;
+    }
+    .teachers__options__text-box:nth-child(even){
+        margin: 0 auto;
+    }
+    .courcess__article{
+        font-size: 20px;
+    }
+    .courcess__box{
+        width: 240px;
+    }
+    .courcess__overflow-mob{
+        width: 2100px;
+max-width: none;
+    }
+    .prices__companies{
+        width: 61%;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    .prices__box{
+        width: 88%;
+        padding: 0;
+    }
+    .prices__box-text{
+        display: none;
+    }
+    .prices__box-year{
+        display: none;
+    }
+    .prices__box-year{
+        display: none;
+    }
+    .ratife__time{
+        width: 100%;
+        margin-bottom: 30px;
+    }
+    .ratife__money{
+        width: 50%;
+        
+    }
+    .ratife__year-mob{
+        display: block;
+        width: 50%;
+        color: #425D78;
+        margin-bottom: 15px;
+    }
+    .fortyfive{
+        margin-bottom: 70px;
+    }
+    .proposal-short{
+        display: none;
+    }
+    .proposal-long{
+        display: none;
+    }
+    .review__article{
+        font-size: 20px;
+    }
+    .free__button-mob{
+
+    }
+    .free{
+        display: none;
+    }
+    .free__button-mob{
+        display: block;
+
     }
 }
