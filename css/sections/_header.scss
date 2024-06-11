@@ -19,6 +19,7 @@
     justify-content: right;
     align-items: center;
     box-shadow: 10px 10px 60px 0px rgba(162,175,189,1);
+    border-radius: 10px 0;
 }
 .nav__menu-mobile{
     display: none;
@@ -224,29 +225,33 @@ margin-right: calc(50% - 57.5px);
         display: none;
     }
     .head__content-text{
-        width: 45%;
-        padding: 0;
+        width: 47%;
+        padding: 10px 0;
+        line-height: 140%;
     }
     .head__content-article{
         font-size: 20px;
+        margin-top: 20px;
     }
     .header__content{
-        background: url("../img/kreml_mobile.png")right no-repeat;
-        height:480px;
+        margin-top: 0;
+        background: url("../img/kreml_mobile.png")right bottom no-repeat;
+        height:410px;
+
     }
     .header__article-box{
         width: 87.5%;
-        padding: 70px 0 0 0;
+        padding: 50px 0 0 0;
     }
     .header__blue{
         border-radius: 0 0 0 0 ;
-        top: 470px;
-        padding: 80px 0 0 0;
+        top: 485px;
+        padding: 80px 0;
         left: 0;
     }
     .head__content-button{
         position: relative;
-        margin: 100px 0 -30px 0;
+        margin: 150px 0 -30px 0;
         border: #ffffff solid 5px;
         border-radius: 25px 0 25px 0;
         width: 240px;

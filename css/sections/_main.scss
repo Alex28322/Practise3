@@ -171,7 +171,7 @@ font-weight: bold;
     width: 100%;
     text-align: center;
     margin-top: 20px;
-    margin-bottom: 50px;
+    margin-bottom: 60px;
 }
 .teachers__subtext-mob{
     display: none;
@@ -190,6 +190,7 @@ font-weight: bold;
     font-size: 20px;
     font-weight: bold;
     display: none;
+    margin: 0 auto;
 }
 .teachers__list {
     width: 40%;
@@ -575,6 +576,7 @@ overflow: visible;
         justify-content: space-evenly;
         order: -2;
         width: 100%;
+        margin-top: -140px;
     }
     .options__scroll{
         width: 840px;
@@ -587,15 +589,16 @@ margin-bottom: -100px;
         width: 80px;
         height: 80px;
         background-size: contain;
-        margin: 30px 0 30px 0;
+        margin: 0 0 20px 0;
     }
     .options__item{
         width: 200px;
-        padding: 30px 20px 50px 20px;
+        padding: 30px 20px 40px 20px;
         margin: 0 20px;
     }
     .options__article{
         width: 200px;
+        margin-bottom: 10px;
     }
     .options__text-mob{
         display: block;
@@ -612,23 +615,35 @@ align-items: center;
     }
     .teachers__img{
         background: url("../img/blonde.svg") center no-repeat;
+        background-size: cover;
         width: 200px;
         height: 200px;
     }
     .teachers__article{
         font-size: 20px;
+        margin-top: 60px;
+        margin-bottom: 0;
     }
     .teachers__subtext-mob{
         display: block;
+        width: 75%;
+        margin-bottom: 55px;
     }
     .teachers__name-mob{
         display: block;
+        margin-bottom: 30px;
     }
     .teachers__list{
         width: 82.5%;
         padding: 0;
         text-align: center;
         margin: 0 auto;
+        margin-top: 50px;
+    }
+    .teachers__list-text{
+        width: 100%;
+        line-height: 180%;
+        margin-bottom: 20px;
     }
     .teachers__options {
         width: 100%;
