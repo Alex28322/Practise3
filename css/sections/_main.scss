@@ -7,7 +7,6 @@
 }
 .options {
     max-width: 940px;
-    width: 65%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -15,15 +14,18 @@
     margin: 0 auto;
     margin-top: -220px;
     z-index: 2;
-    overflow-x: hidden;
     text-align: center;
 }
-.oprions__img-box{
-     max-width: 940px;
+.options__scroll{
     width: 100%;
+    max-width: 940px;
     display: flex;
-    justify-content: space-around;
-    margin-bottom: -50px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0 auto;
+    z-index: 2;
+    text-align: center;
+    padding-top: 55px;
 }
 .options__item {
     display: flex;
@@ -40,7 +42,7 @@ font-family: "Monserrat", sans-serif;
 .options__img {
     width: 110px;
     height: 110px;
-    z-index: 2;
+    margin:-158px 0 70px 0;
 }
 .bord {
     background: url("../img/bord.svg") center no-repeat;
@@ -210,11 +212,14 @@ flex-wrap: wrap;
     font-weight: 500;
     width: 90%;
 }
-.teachers__list-dot {
-background: url("../img/dot.svg") center no-repeat;
-width: 14px;
-height: 14px;
-margin-right: 35px;
+.teachers__list-text-dot::before{
+    content: "";
+    display: inline-block; 
+  width: 14px; 
+  height: 14px; 
+  background-color: #BFC4DA; 
+  border-radius: 50%; 
+  margin-right: 10px;
 }
 .teachers__options {
     padding-top: 30px;
@@ -235,6 +240,7 @@ font-family: "Montserrat", sans-serif;
     display: flex;
     flex-direction: column;
     margin-right: 90px;
+    margin-left: 30px;
 }
 .russian__img {
     background: url("../img/russian.svg") center no-repeat;
@@ -272,6 +278,7 @@ width: 360px;
 background-color: #EDF1F5;
 height: 60px;
 margin: 75px 0 0 150px;
+border-radius: 50px;
 }
 .teachers__options__button-gray {
     color: #fff;
@@ -431,6 +438,7 @@ span {
 }
 .review {
     width: 80%;
+    max-width: 1140px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -445,7 +453,15 @@ span {
     text-align: center;
     padding-bottom: 90px;
 }
+.review__scroll{
+    max-width: 1140px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 0 auto;
+}
 .review__box {
+    position: relative;
     display: flex;
     flex-wrap: wrap;
     width: 435px;
@@ -454,7 +470,7 @@ span {
     border-radius: 16px;
     margin-bottom: 30px;
     &:hover .review__box-button,.review__box-button:hover{
-display: block;
+        display: block;
     }
 }
 .review__box-img {
@@ -476,24 +492,25 @@ display: block;
     font-family: "Open Sans",sans-serif;
 }
 .review__box-button {
+    position: absolute;
     width: 209px;
     color: #fff;
     background-color: #0039A6;
-    padding: 20px 30px;
+    padding: 20px 0;
     border-radius: 20px 0 20px 0;
     border: 5px solid #fff;
-    margin-left: 206px;
-    margin-bottom: -70px;
-    display: none;
     font-family: "Open Sans",sans-serif;
     font-weight: bold;
+    bottom: -16px;
+    right: 35px;
+    display: none;
 }
 .free {
     width: 70%;
     display: flex;
     align-items: center;
-    background: url("../img/Trapezoid.svg") center no-repeat;
-    background-size: contain;
+    background: url("../img/Trapezoid.svg") center right no-repeat;
+    background-size: cover;
     margin: 0 auto;
     padding: 40px 60px;
     border-radius: 16px 30px 16px 16px;
@@ -536,15 +553,32 @@ overflow: visible;
     border-radius: 20px 0 20px 0;
     border: 5px solid #fff;
 }
+@media(max-width:1300px){
+    .courcess{
+        width: 100%;
+    } 
+    .teachers__list{
+        padding-right: 0;
+        width: 30%;
+    }
+    .teachers__options__text-box:nth-child(even){
+        margin-left: 0;
+    }
+}
 @media (max-width:780px){
     .main{
         min-width: 320px;
         margin-top: -240px;
     }
     .options{
-        width: 800px;
+        min-width: 320px;
         justify-content: space-evenly;
         order: -2;
+        width: 100%;
+    }
+    .options__scroll{
+        width: 840px;
+        flex-wrap: nowrap;
     }
     .oprions__img-box{
 margin-bottom: -100px;
@@ -553,11 +587,12 @@ margin-bottom: -100px;
         width: 80px;
         height: 80px;
         background-size: contain;
-        margin-top: 30px;
+        margin: 30px 0 30px 0;
     }
     .options__item{
         width: 200px;
-        padding: 130px 20px 50px 20px;
+        padding: 30px 20px 50px 20px;
+        margin: 0 20px;
     }
     .options__article{
         width: 200px;
@@ -595,14 +630,12 @@ align-items: center;
         text-align: center;
         margin: 0 auto;
     }
-    .teachers__list-dot{
-        margin-right: 10px;
-    }
     .teachers__options {
         width: 100%;
     }
     .teachers__options__language-box{
         padding: 0;
+        overflow-x: scroll;
     }
     .teachers__options__button-gray{
         width: 135px;
@@ -613,7 +646,7 @@ align-items: center;
     .teachers__options__button-container{
         width: 88%;
         margin: 0 auto;
-        margin: 60px 0 60px 0;
+        margin: 60px 0 60px 30px;
     }
     .teachers__options__text-box-container{
         flex-direction: column;
@@ -625,15 +658,23 @@ align-items: center;
     .teachers__options__text-box:nth-child(even){
         margin: 0 auto;
     }
+    .courcess{
+        width: 100%;
+    }
     .courcess__article{
         font-size: 20px;
     }
+    .courcess__box-article{
+        width: 180px;
+    }
     .courcess__box{
         width: 240px;
+        margin-right: 20px;
     }
     .courcess__overflow-mob{
-        width: 2100px;
-max-width: none;
+        padding: 50px 0 50px 30px;
+flex-wrap: nowrap;
+overflow-x: scroll;
     }
     .prices__companies{
         width: 61%;
@@ -668,7 +709,12 @@ max-width: none;
         margin-bottom: 15px;
     }
     .fortyfive{
-        margin-bottom: 70px;
+        padding-bottom: 50px;
+        margin-bottom: 20px;
+    }
+    .ninety{
+        padding-bottom: 50px;
+        margin-bottom: 20px;
     }
     .proposal-short{
         display: none;
@@ -676,17 +722,40 @@ max-width: none;
     .proposal-long{
         display: none;
     }
+    .review__box{
+box-shadow: none;
+flex-direction: column;
+padding: 0;
+padding-top: 50px;
+align-items: center;
+margin: 0 20px;
+    }
+    .review{
+        padding-top: 0;
+        width: 100%;
+    }
+    .review__box-article{
+        font-size: 18px;
+    }
     .review__article{
         font-size: 20px;
     }
-    .free__button-mob{
-
+    .review__box-text{
+        width: 80%;
+        min-width: 280px;
+        text-align: center;
+    }
+    .review__scroll{
+        overflow-x: scroll;
+        flex-wrap: nowrap;
     }
     .free{
         display: none;
     }
     .free__button-mob{
         display: block;
-
+        margin: 0 auto;
+        margin-top: 80px;
+        margin-left: 8%;
     }
 }
