@@ -123,6 +123,7 @@ font-size: 18px;
     box-shadow: 10px 10px 60px 0px rgba(162,175,189,1);
     font-family: "Monserrat", sans-serif;
     border-radius: 16px;
+    color: #425D78;
 }
 .courcess__box-img {
     background: url("../img/readhead.svg")center no-repeat;
@@ -140,6 +141,7 @@ font-size: 18px;
     font-weight: bold;
     font-size: 18px;
     margin-bottom: 20px;
+    font-weight: bold;
 }
 .courcess__box-text {
 width: 85%;
@@ -155,6 +157,8 @@ font-weight: bold;
 }
 .courcess__box-age-number {
     width: 22%;
+    font-weight: bold;
+    color: #0039A6;
 }
 .teachers {
     width: 100%;
@@ -308,6 +312,9 @@ border-radius: 50px;
     padding-bottom: 20px;
 
 }
+.teachers__options__text-box-mob{
+    display: none;
+}
 .teachers__options__text-box:nth-child(even) {
     margin-left: 60px;
 }
@@ -411,9 +418,11 @@ padding: 0 70px 0 120px;
 .ratife__time {
     width: 49%;
     color: #425D78;
+    font-weight: bold;
 }
 .ratife__year-mob{
     display: none;
+    font-weight: 500;
 }
 .ratife__money {
     width: 25%;
@@ -558,6 +567,9 @@ overflow: visible;
     .courcess{
         width: 100%;
     } 
+    .courcess__text{
+        width: 75%;
+    }
     .teachers__list{
         padding-right: 0;
         width: 30%;
@@ -652,6 +664,9 @@ align-items: center;
         padding: 0;
         overflow-x: scroll;
     }
+    .teachers__options__text-box-mob{
+        display: block;
+    }
     .teachers__options__button-gray{
         width: 135px;
     }
@@ -666,9 +681,11 @@ align-items: center;
     .teachers__options__text-box-container{
         flex-direction: column;
         padding: 0;
+        line-height: 180%;
     }
     .teachers__options__text-box{
         margin: 0 auto;
+        width: 90%;
     }
     .teachers__options__text-box:nth-child(even){
         margin: 0 auto;
@@ -680,11 +697,27 @@ align-items: center;
         font-size: 20px;
     }
     .courcess__box-article{
+        margin-top: 30px;
         width: 180px;
+        font-size: 20px;
     }
     .courcess__box{
         width: 240px;
         margin-right: 20px;
+        text-align: left;
+        padding: 30px;
+    }
+    .courcess__box-img{
+        margin: 0;
+    }
+    .courcess__box-text{
+        margin: 0;
+    }
+    .courcess__box-age{
+        margin-top: 20px;
+    }
+    .courcess__box-age-number{
+        margin-top: 20px;
     }
     .courcess__overflow-mob{
         padding: 50px 0 50px 30px;
@@ -694,7 +727,11 @@ overflow-x: scroll;
     .prices__companies{
         width: 61%;
         flex-wrap: wrap;
-        justify-content: space-around;
+        justify-content: space-between;
+    }
+    .prices__article{
+        font-size: 20px;
+        margin: 20px 0;
     }
     .prices__box{
         width: 88%;
@@ -751,6 +788,7 @@ margin: 0 20px;
     }
     .review__box-article{
         font-size: 18px;
+        margin-bottom: 30px;
     }
     .review__article{
         font-size: 20px;
@@ -772,5 +810,6 @@ margin: 0 20px;
         margin: 0 auto;
         margin-top: 80px;
         margin-left: 8%;
+        font-size: 12px;
     }
 }
